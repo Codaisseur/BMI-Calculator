@@ -1,3 +1,5 @@
+console.log("What does process.argv contain?", process.argv);
+
 var weightInKg = 82;
 var heightInM = 1.79;
 
