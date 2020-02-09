@@ -16,7 +16,7 @@ weight: ${weightInKg}
 FACING THE FACTS
 ****************
 
-Your BMI is ${BMI}
+Your BMI is ${Math.round(BMI)}
 
 A BMI under 18.5 is considered underweight
 A BMI above 25 is considered overweight
