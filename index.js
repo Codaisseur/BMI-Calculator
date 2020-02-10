@@ -23,6 +23,11 @@ var BMR = 10 * weightInKg + 6.25 * heightInCm - 5 * age;
 // Checking myself
 console.log("BMR", BMR);
 
+// Assumption: calories for a normal lifestyle is BMR * 1.4
+var dailyCalories = BMR * 1.4;
+
+console.log("Daily calories", dailyCalories);
+
 console.log(`
 **************
 BMI CALCULATOR
