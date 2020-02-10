@@ -6,9 +6,6 @@ var age = parseInt(process.argv[4]);
 var dailyExercise = process.argv[5];
 var gender = process.argv[6];
 
-// checking myself
-console.log("gender", gender);
-
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
@@ -29,9 +26,6 @@ if (gender === "m") {
 } else {
   BMR = 10 * weightInKg + 6.25 * heightInCm - 5 * age - 150;
 }
-
-// Checking myself
-console.log("BMR", BMR);
 
 // Assumption: calories for a normal lifestyle is BMR * 1.4
 // Assumption: calories for a active lifestyle is BMR * 1.6
@@ -61,6 +55,7 @@ BMI CALCULATOR
 **************
 
 age: ${age} years
+gender: ${gender}
 height: ${heightInM} m
 weight: ${weightInKg} kg
 do you exercise daily? ${dailyExercise}
