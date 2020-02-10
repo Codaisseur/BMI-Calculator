@@ -46,6 +46,7 @@ BMI CALCULATOR
 age: ${age} years
 height: ${heightInM} m
 weight: ${weightInKg} kg
+do you exercise daily? ${dailyExercise}
 
 ****************
 FACING THE FACTS
