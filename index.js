@@ -42,8 +42,12 @@ if (dailyExercise === "yes") {
 
 var weightToLoseKg = weightInKg - idealWeightKg;
 
-// Assumption: we can lose 0.5 kg a week
-var dietWeeks = weightToLoseKg / 0.5;
+// Assumption: we can lose or gain 0.5 kg a week
+// Using Math.abs to make dietWeeks a positive number
+var dietWeeks = Math.abs(weightToLoseKg / 0.5);
+
+// Checking myself
+console.log(dietWeeks);
 
 // Assumption: to lose 0.5 kg a week we need to cut calorie intake by 500 calories
 // Assumption: to lgain 0.5 kg a week we need to increase calorie intake by 500 calories
