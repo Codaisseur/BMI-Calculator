@@ -66,6 +66,19 @@ if (weightInKg < 30 || weightInKg > 300) {
   process.exit();
 }
 
+// check wether dailyExercise was answered with "yes" or "no"
+if (dailyExercise !== "yes" && dailyExercise !== "no") {
+  console.log(`
+    Please specify wether you exercise daily with yes or no
+
+    You entered: ${dailyExercise}
+
+    (Don't worry, we won't judge you if you enter no)
+  `);
+
+  process.exit();
+}
+
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
