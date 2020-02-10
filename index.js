@@ -20,8 +20,12 @@ var dailyCalories = BMR * 1.4;
 
 var weightToLoseKg = weightInKg - idealWeightKg;
 
+// Assumption: we can lose 0.5 kg a week
+var dietWeeks = weightToLoseKg / 0.5;
+
 // Checking myself
 console.log("weight to lose", weightToLoseKg);
+console.log("Diet weeks", dietWeeks);
 
 console.log(`
 **************
