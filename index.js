@@ -6,9 +6,6 @@ var heightInM = parseFloat(process.argv[3]);
 // hardcode the data for age
 var age = 32;
 
-// Checking myself
-console.log("age:", age);
-
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
@@ -20,19 +17,15 @@ var idealWeight = 22.5 * heightInM * heightInM;
 var heightInCm = heightInM * 100;
 var BMR = 10 * weightInKg + 6.25 * heightInCm - 5 * age;
 
-// Checking myself
-console.log("BMR", BMR);
-
 // Assumption: calories for a normal lifestyle is BMR * 1.4
 var dailyCalories = BMR * 1.4;
-
-console.log("Daily calories", dailyCalories);
 
 console.log(`
 **************
 BMI CALCULATOR
 **************
 
+age: ${age} years
 height: ${heightInM} m
 weight: ${weightInKg} kg
 
@@ -46,4 +39,5 @@ A BMI under 18.5 is considered underweight
 A BMI above 25 is considered overweight
 
 Your ideal weight is ${Math.round(idealWeight)} kg
+With a normal lifestyle you burn ${Math.round(dailyCalories)} calories a day
 `);
