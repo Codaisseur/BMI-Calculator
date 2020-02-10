@@ -4,7 +4,7 @@ var weightInKg = parseInt(process.argv[2]);
 var heightInM = parseFloat(process.argv[3]);
 var age = parseInt(process.argv[4]);
 var dailyExercise = process.argv[5];
-var gender = "m";
+var gender = process.argv[6];
 
 // checking myself
 console.log("gender", gender);
