@@ -20,7 +20,20 @@ var heightInCm = heightInM * 100;
 var BMR = 10 * weightInKg + 6.25 * heightInCm - 5 * age;
 
 // Assumption: calories for a normal lifestyle is BMR * 1.4
-var dailyCalories = BMR * 1.4;
+// Assumption: calories for a active lifestyle is BMR * 1.6
+
+// Declaring a variable, but not assigning it yet, the value will depend on wether someone exercises!
+var dailyCalories;
+
+if (dailyExercise === "yes") {
+  // assigning dailyCalories a value now that we've checked the condition
+  dailyCalories = BMR * 1.6;
+} else {
+  dailyCalories = BMR * 1.4;
+}
+
+// Checking myself
+console.log(dailyCalories);
 
 // Assumption: This app is built for people who weigh too much
 var weightToLoseKg = weightInKg - idealWeightKg;
