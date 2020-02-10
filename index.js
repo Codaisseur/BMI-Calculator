@@ -39,6 +39,20 @@ if (isNaN(weightInKg) || isNaN(heightInM) || isNaN(age)) {
   process.exit();
 }
 
+if (age < 20) {
+  console.log(`
+    This BMI calculator was designed to be used by people older than 20
+
+    BMI is calculated differently for young people.
+
+    Please visit: https://en.wikipedia.org/wiki/Body_mass_index#Children_(aged_2_to_20)
+
+    For more information
+  `);
+
+  process.exit();
+}
+
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
