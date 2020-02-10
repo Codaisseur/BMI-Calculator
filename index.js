@@ -6,6 +6,13 @@ var heightInM = parseFloat(process.argv[3]);
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
+// Assumptions ideal BMI is 22.5
+// The formula for idealWeight is 22.5 x height (m) x height (m)
+var idealWeight = 22.5 * heightInM * heightInM;
+
+// Checking myself
+console.log(idealWeight);
+
 console.log(`
 **************
 BMI CALCULATOR
