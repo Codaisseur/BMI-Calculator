@@ -53,6 +53,19 @@ if (age < 20) {
   process.exit();
 }
 
+// check if weight is lower than 30 kg OR higher than 300 kg
+if (weightInKg < 30 || weightInKg > 300) {
+  console.log(`
+    Please enter a weight in kgs
+    
+    Your weight of ${weightInKg} kgs does not fall in the range between 30 kg and 300 kg
+
+    If you weight is below 30 kg or over 300 kg seek professional medical help
+  `);
+
+  process.exit();
+}
+
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
