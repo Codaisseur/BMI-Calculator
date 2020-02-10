@@ -24,6 +24,21 @@ var age = parseInt(process.argv[4]);
 var dailyExercise = process.argv[5];
 var gender = process.argv[6];
 
+// Check if weight OR height Or age is not a number (NaN)
+if (isNaN(weightInKg) || isNaN(heightInM) || isNaN(age)) {
+  console.log(`
+    Please make sure weight, height and age are numbers:
+
+    weight (kg) example: 82 | your input: ${process.argv[2]}
+    height (m) example 1.79 | your input: ${process.argv[3]}
+    age (years) example 32  | your input: ${process.argv[4]} 
+
+    $ node index.js 82 1.79 32 yes m
+  `);
+
+  process.exit();
+}
+
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
