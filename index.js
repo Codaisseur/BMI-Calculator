@@ -2,9 +2,7 @@
 
 var weightInKg = parseInt(process.argv[2]);
 var heightInM = parseFloat(process.argv[3]);
-
-// hardcode the data for age
-var age = 32;
+var age = parseInt(process.argv[4]);
 
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
