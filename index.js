@@ -5,9 +5,6 @@ var heightInM = parseFloat(process.argv[3]);
 var age = parseInt(process.argv[4]);
 var dailyExercise = "yes";
 
-// Checking myself
-console.log(dailyExercise);
-
 // The formula for BMI is: weight (kg) / (height (m) x height (m))
 var BMI = weightInKg / (heightInM * heightInM);
 
@@ -31,9 +28,6 @@ if (dailyExercise === "yes") {
 } else {
   dailyCalories = BMR * 1.4;
 }
-
-// Checking myself
-console.log(dailyCalories);
 
 // Assumption: This app is built for people who weigh too much
 var weightToLoseKg = weightInKg - idealWeightKg;
