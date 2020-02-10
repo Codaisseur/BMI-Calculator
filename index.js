@@ -1,4 +1,22 @@
-// console.log("What does process.argv contain?", process.argv);
+if (process.argv.length !== 7) {
+  console.log(`
+    You gave ${process.argv.length - 2} arguments(s) to the program
+
+    Please provide 5 arguments for
+    
+    weight (kg), 
+    height (m), 
+    age, 
+    wether you exercise daily (yes or no)
+    and your gender (m or f)
+    
+    Example:
+
+    $ node index.js 82 1.79 32 yes m
+  `);
+
+  process.exit();
+}
 
 var weightInKg = parseInt(process.argv[2]);
 var heightInM = parseFloat(process.argv[3]);
