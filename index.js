@@ -16,6 +16,13 @@ var BMI = weightInKg / (heightInM * heightInM);
 // The formula for idealWeight is 22.5 x height (m) x height (m)
 var idealWeight = 22.5 * heightInM * heightInM;
 
+// The formula for Basal Metabolic Rate (BMR) is: 10 x weight (kg) + 6.25 x height (cm) - 5 x age
+var heightInCm = heightInM * 100;
+var BMR = 10 * weightInKg + 6.25 * heightInCm - 5 * age;
+
+// Checking myself
+console.log("BMR", BMR);
+
 console.log(`
 **************
 BMI CALCULATOR
