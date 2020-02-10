@@ -46,9 +46,6 @@ var weightToLoseKg = weightInKg - idealWeightKg;
 // Using Math.abs to make dietWeeks a positive number
 var dietWeeks = Math.abs(weightToLoseKg / 0.5);
 
-// Checking myself
-console.log(dietWeeks);
-
 // Assumption: to lose 0.5 kg a week we need to cut calorie intake by 500 calories
 // Assumption: to lgain 0.5 kg a week we need to increase calorie intake by 500 calories
 
@@ -61,9 +58,6 @@ if (weightToLoseKg > 0) {
 } else {
   dietCalories = dailyCalories + 500;
 }
-
-// Checking myself
-console.log(dietCalories);
 
 console.log(`
 **************
